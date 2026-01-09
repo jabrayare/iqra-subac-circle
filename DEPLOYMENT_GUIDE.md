@@ -5,8 +5,8 @@
 ### **Prerequisites**
 - [ ] Node.js 18+ installed
 - [ ] Git repository created
-- [ ] Domain name purchased (`iqra-subac.com`)
-- [ ] Professional email addresses set up
+- [x] **Deployed to Vercel:** `https://iqra-subac-circle-vercel-git-main-jabros-projects.vercel.app`
+- [ ] Professional email addresses set up (optional)
 
 ## 🌐 **Option 1: Vercel Deployment (Recommended)**
 
@@ -39,12 +39,12 @@ git commit -m "Initial commit: Iqra website"
 
 2. **Create GitHub repository:**
    - Go to https://github.com/new
-   - Repository name: `iqra-subac-website`
+   - Repository name: `iqra-subac-circle`
    - Make it public for easier deployment
 
 3. **Push to GitHub:**
 ```bash
-git remote add origin https://github.com/yourusername/iqra-subac-website.git
+git remote add origin git@github.com:jabrayare/iqra-subac-circle.git
 git branch -M main
 git push -u origin main
 ```
@@ -54,7 +54,7 @@ git push -u origin main
 1. **Go to Vercel:** https://vercel.com
 2. **Sign up/Login** with GitHub account
 3. **Click "New Project"**
-4. **Import** your `iqra-subac-website` repository
+4. **Import** your `iqra-subac-circle` repository
 5. **Configure project:**
    - Framework Preset: Next.js
    - Root Directory: `./` (default)
@@ -68,26 +68,18 @@ NEXT_PUBLIC_GA_ID=your-google-analytics-id
 
 7. **Click "Deploy"**
 
-### **Step 4: Configure Custom Domain**
+### **Step 4: ✅ Deployment Complete!**
 
-1. **In Vercel Dashboard:**
+**Your website is now live at:**
+`https://iqra-subac-circle-vercel-git-main-jabros-projects.vercel.app`
+
+**Optional: Configure Custom Domain**
+1. **Purchase a custom domain** (e.g., `iqra-subac.com`)
+2. **In Vercel Dashboard:**
    - Go to your project settings
    - Click "Domains"
-   - Add `iqra-subac.com`
-   - Add `www.iqra-subac.com`
-
-2. **Update DNS Records:**
-   - Go to your domain provider
-   - Add these records:
-   ```
-   Type: A
-   Name: @
-   Value: 76.76.19.61 (Vercel IP)
-   
-   Type: CNAME
-   Name: www
-   Value: cname.vercel-dns.com
-   ```
+   - Add your custom domain
+3. **Update DNS Records** as instructed by Vercel
 
 ## 🌐 **Option 2: Netlify Deployment**
 
@@ -134,13 +126,13 @@ Update `PrivacyView.swift` with real URLs:
 
 ```swift
 private func openPrivacyPolicy() {
-    if let url = URL(string: "https://iqra-subac.com/privacy") {
+    if let url = URL(string: "https://iqra-subac-circle-vercel-git-main-jabros-projects.vercel.app/privacy") {
         openURL(url)
     }
 }
 
 private func openTermsOfService() {
-    if let url = URL(string: "https://iqra-subac.com/terms") {
+    if let url = URL(string: "https://iqra-subac-circle-vercel-git-main-jabros-projects.vercel.app/terms") {
         openURL(url)
     }
 }
@@ -155,15 +147,15 @@ private func openSupportEmail() {
 ### **2. App Store Connect Configuration**
 
 In App Store Connect, add:
-- **Privacy Policy URL:** `https://iqra-subac.com/privacy`
-- **Support URL:** `https://iqra-subac.com/support`
-- **Marketing URL:** `https://iqra-subac.com/app`
+- **Privacy Policy URL:** `https://iqra-subac-circle-vercel-git-main-jabros-projects.vercel.app/privacy`
+- **Support URL:** `https://iqra-subac-circle-vercel-git-main-jabros-projects.vercel.app/support`
+- **Marketing URL:** `https://iqra-subac-circle-vercel-git-main-jabros-projects.vercel.app/app`
 
 ### **3. Google Analytics Setup**
 
 1. **Create Google Analytics account:**
    - Go to https://analytics.google.com
-   - Create property for `iqra-subac.com`
+   - Create property for your website
    - Get tracking ID (GA4)
 
 2. **Update Vercel environment variables:**
@@ -173,11 +165,11 @@ In App Store Connect, add:
 
 1. **Google Search Console:**
    - Go to https://search.google.com/search-console
-   - Add property for `iqra-subac.com`
-   - Verify ownership via DNS
+   - Add property for `https://iqra-subac-circle-vercel-git-main-jabros-projects.vercel.app`
+   - Verify ownership via HTML file upload
 
 2. **Submit Sitemap:**
-   - Your sitemap is at: `https://iqra-subac.com/sitemap.xml`
+   - Your sitemap is at: `https://iqra-subac-circle-vercel-git-main-jabros-projects.vercel.app/sitemap.xml`
    - Submit to Google Search Console
 
 ## 📊 **Monitoring & Maintenance**
@@ -223,13 +215,17 @@ Before going live, test:
 
 ## 💰 **Cost Summary**
 
-### **Annual Costs**
-- **Domain:** $15/year (.com)
+### **Current Setup (Free)**
 - **Hosting:** $0 (Vercel free tier)
-- **Email:** $72/year (Google Workspace)
 - **SSL:** $0 (included with Vercel)
+- **Domain:** $0 (using free Vercel subdomain)
 
-**Total Annual Cost:** ~$87/year
+### **Optional Upgrades**
+- **Custom Domain:** $15/year (.com)
+- **Professional Email:** $72/year (Google Workspace)
+
+**Current Cost:** **FREE** 🎉
+**With Custom Domain:** ~$87/year
 
 ## 🚨 **Troubleshooting**
 

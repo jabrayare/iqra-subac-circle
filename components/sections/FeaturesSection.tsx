@@ -1,101 +1,123 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { 
-  Clock, 
-  Compass, 
-  MapPin, 
-  Users
-} from 'lucide-react'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
+import { Clock, Compass, MapPin, Users, ArrowUpRight } from 'lucide-react'
 
 const features = [
   {
     icon: Users,
     title: 'Subac Circles',
-    description: 'Organize Quran recitation circles with your community',
-    color: 'text-deep-ocean-blue',
-    bgColor: 'bg-blue-100 dark:bg-blue-900/30'
+    description: 'Create and manage Quran recitation circles with your community. Track progress, coordinate schedules, and celebrate completions together.',
+    number: '01'
   },
   {
     icon: Clock,
     title: 'Prayer Times',
-    description: 'Accurate prayer times based on your location',
-    color: 'text-warm-sunset-orange',
-    bgColor: 'bg-orange-100 dark:bg-orange-900/30'
+    description: 'Accurate prayer times calculated for your exact location. Never miss a prayer with intelligent notifications and countdown timers.',
+    number: '02'
   },
   {
     icon: Compass,
     title: 'Qibla Direction',
-    description: 'Find the exact direction to Mecca anywhere',
-    color: 'text-accent-green',
-    bgColor: 'bg-green-100 dark:bg-green-900/30'
+    description: 'Find the precise direction to the Kaaba from anywhere in the world. Augmented reality compass for intuitive navigation.',
+    number: '03'
   },
   {
     icon: MapPin,
     title: 'Mosque Finder',
-    description: 'Discover nearby mosques with detailed information',
-    color: 'text-purple-600',
-    bgColor: 'bg-purple-100 dark:bg-purple-900/30'
+    description: 'Discover nearby mosques with prayer times, facilities, and community events. Connect with local Islamic centers.',
+    number: '04'
   }
 ]
 
-export default function FeaturesSection() {
+function FeatureCard({ feature, index }: { feature: typeof features[0]; index: number }) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const Icon = feature.icon
+
   return (
-    <section className="section-padding pb-24">
-      <div className="container-custom">
+    <motion.div
+      ref={ref}
+      className="group"
+      initial={{ opacity: 0, y: 40 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
+    >
+      <div className="card-feature h-full">
+        {/* Number */}
+        <span className="text-6xl font-serif font-bold text-[var(--color-primary)] opacity-10 absolute top-6 right-6 select-none">
+          {feature.number}
+        </span>
+
+        {/* Icon */}
+        <div className="icon-container mb-8 group-hover:scale-110 transition-all duration-500">
+          <Icon className="w-7 h-7" strokeWidth={1.5} />
+        </div>
+
+        {/* Content */}
+        <h3 className="heading-display heading-md mb-4 group-hover:text-[var(--color-primary)] transition-colors">
+          {feature.title}
+        </h3>
+
+        <p className="text-body leading-relaxed mb-6">
+          {feature.description}
+        </p>
+
+        {/* Learn more link */}
+        <div className="flex items-center gap-2 text-sm font-medium text-[var(--color-primary)] opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+          <span>Learn more</span>
+          <ArrowUpRight className="w-4 h-4" />
+        </div>
+      </div>
+    </motion.div>
+  )
+}
+
+export default function FeaturesSection() {
+  const headerRef = useRef(null)
+  const isHeaderInView = useInView(headerRef, { once: true, margin: '-100px' })
+
+  return (
+    <section className="section-padding relative overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.03]">
+        <div className="absolute top-0 left-0 w-full h-full" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, var(--color-text-primary) 1px, transparent 0)`,
+          backgroundSize: '48px 48px'
+        }} />
+      </div>
+
+      <div className="container-elegant relative z-10">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          ref={headerRef}
+          className="text-center max-w-2xl mx-auto mb-20"
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          animate={isHeaderInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h2 className="heading-2 mb-6">
-            Everything You Need for
-            <span className="gradient-text"> Islamic Practice</span>
+          <span className="text-label mb-4 block">Features</span>
+
+          <h2 className="heading-display heading-lg mb-6">
+            Everything you need for your{' '}
+            <span className="text-gradient">Islamic practice</span>
           </h2>
-          <p className="body-large max-w-3xl mx-auto">
-            Essential tools for the modern Muslim, designed specifically for the Somali community.
+
+          <p className="text-body text-body-lg">
+            Essential tools designed with intention, built for the modern Muslim lifestyle.
           </p>
         </motion.div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-          {features.map((feature, index) => {
-            const Icon = feature.icon
-            
-            return (
-              <motion.div
-                key={index}
-                className="feature-card text-center group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -8 }}
-              >
-                {/* Icon */}
-                <motion.div
-                  className={`w-16 h-16 ${feature.bgColor} rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300`}
-                  whileHover={{ rotate: [0, -10, 10, -10, 0] }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <Icon className={`h-8 w-8 ${feature.color}`} />
-                </motion.div>
-
-                {/* Content */}
-                <h3 className="text-xl font-bold mb-6 text-text-primary-light dark:text-text-primary-dark">
-                  {feature.title}
-                </h3>
-                
-                <p className="text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">
-                  {feature.description}
-                </p>
-              </motion.div>
-            )
-          })}
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
+          {features.map((feature, index) => (
+            <FeatureCard key={feature.title} feature={feature} index={index} />
+          ))}
         </div>
+
+        {/* Decorative element */}
+        <div className="absolute -right-32 top-1/2 w-64 h-64 rounded-full bg-[var(--color-primary)] opacity-[0.03] dark:opacity-[0.06] blur-3xl pointer-events-none" />
       </div>
     </section>
   )

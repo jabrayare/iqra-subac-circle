@@ -141,41 +141,68 @@ export default function TermsOfServiceContent() {
   }
 
   return (
-    <div className="min-h-screen bg-soft-cloud dark:bg-midnight-navy">
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-bg)' }}>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-warm-sunset-orange via-orange-500 to-deep-ocean-blue text-white py-20">
-        <div className="container-custom">
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, var(--color-primary) 0%, #0a3d3d 50%, #083030 100%)' }} />
+
+        {/* Decorative Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full opacity-20"
+               style={{ background: 'radial-gradient(circle, var(--color-accent) 0%, transparent 70%)' }} />
+          <div className="absolute bottom-10 right-10 w-64 h-64 rounded-full opacity-15"
+               style={{ background: 'radial-gradient(circle, #4fb8b8 0%, transparent 70%)' }} />
+        </div>
+
+        <div className="container-elegant relative z-10">
           <motion.div
             className="text-center max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex justify-center mb-6">
-              <FileText className="h-16 w-16 text-white" />
+            <div className="w-20 h-20 rounded-full mx-auto mb-8 flex items-center justify-center"
+                 style={{ backgroundColor: 'rgba(201, 162, 39, 0.2)' }}>
+              <FileText className="h-10 w-10" style={{ color: 'var(--color-accent)' }} />
             </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Terms of Service
+
+            <h1 className="heading-display heading-xl text-white mb-6">
+              Terms of{' '}
+              <span className="relative inline-block">
+                Service
+                <svg className="absolute -bottom-2 left-0 w-full h-3" viewBox="0 0 200 12" preserveAspectRatio="none">
+                  <path d="M0 9C50 3 150 3 200 9" stroke="var(--color-accent)" strokeWidth="3" fill="none" strokeLinecap="round"/>
+                </svg>
+              </span>
             </h1>
-            
-            <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
-              Clear and fair terms that govern your use of Iqra | The Subac Circle, 
+
+            <p className="text-body-lg max-w-2xl mx-auto mb-10" style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
+              Clear and fair terms that govern your use of Iqra | The Subac Circle,
               designed with Islamic principles of justice and transparency.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <div className="flex items-center text-sm bg-white/20 rounded-full px-4 py-2">
+              <div className="flex items-center text-sm rounded-full px-4 py-2"
+                   style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: 'rgba(255, 255, 255, 0.9)' }}>
                 <Clock className="h-4 w-4 mr-2" />
                 Last updated: {lastUpdated}
               </div>
-              
-              <button className="flex items-center text-sm bg-white/20 hover:bg-white/30 rounded-full px-4 py-2 transition-colors">
+
+              <button className="flex items-center text-sm rounded-full px-4 py-2 transition-colors hover:bg-white/20"
+                      style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: 'rgba(255, 255, 255, 0.9)' }}>
                 <FileDown className="h-4 w-4 mr-2" />
                 Download PDF
               </button>
             </div>
           </motion.div>
+        </div>
+
+        {/* Bottom Wave */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none" className="w-full h-20">
+            <path d="M0 120V60C240 20 480 0 720 0C960 0 1200 20 1440 60V120H0Z" fill="var(--color-bg)"/>
+          </svg>
         </div>
       </section>
 

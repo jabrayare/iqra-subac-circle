@@ -1,17 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import { ThemeProvider } from '@/components/theme/ThemeProvider'
 import { Analytics } from '@/components/analytics/Analytics'
-import { Toast } from '@/components/ui/Toast'
-
-const inter = Inter({ 
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter'
-})
 
 export const metadata: Metadata = {
   title: {
@@ -22,7 +14,7 @@ export const metadata: Metadata = {
   keywords: [
     'Islamic app',
     'Prayer times',
-    'Qibla compass', 
+    'Qibla compass',
     'Mosque finder',
     'Subac',
     'Quran recitation',
@@ -77,10 +69,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-site-verification-code',
-    yandex: 'your-yandex-verification-code',
-  },
 }
 
 export default function RootLayout({
@@ -89,23 +77,23 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={inter.variable}>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#1e3a8a" />
+        <meta name="theme-color" content="#0d4f4f" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="Iqra Subac" />
+        <meta name="apple-mobile-web-app-title" content="Iqra" />
       </head>
-      <body className="font-body antialiased">
+      <body className="antialiased">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
-          disableTransitionOnChange
+          disableTransitionOnChange={false}
         >
           <div className="flex min-h-screen flex-col">
             <Navbar />
@@ -114,7 +102,6 @@ export default function RootLayout({
             </main>
             <Footer />
           </div>
-          <Toast />
           <Analytics />
         </ThemeProvider>
       </body>

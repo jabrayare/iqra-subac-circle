@@ -5,7 +5,7 @@
 ### **Prerequisites**
 - [ ] Node.js 18+ installed
 - [ ] Git repository created
-- [x] **Deployed to Vercel:** `https://iqra-subac-circle-vercel.vercel.app`
+- [x] **Deployed to Vercel:** `https://iqra-subac.vercel.app`
 - [ ] Professional email addresses set up (optional)
 
 ## 🌐 **Option 1: Vercel Deployment (Recommended)**
@@ -71,7 +71,7 @@ NEXT_PUBLIC_GA_ID=your-google-analytics-id
 ### **Step 4: ✅ Deployment Complete!**
 
 **Your website is now live at:**
-`https://iqra-subac-circle-vercel.vercel.app`
+`https://iqra-subac.vercel.app`
 
 **Optional: Configure Custom Domain**
 1. **Purchase a custom domain** (e.g., `iqra-subac.com`)
@@ -126,13 +126,13 @@ Update `PrivacyView.swift` with real URLs:
 
 ```swift
 private func openPrivacyPolicy() {
-    if let url = URL(string: "https://iqra-subac-circle-vercel.vercel.app/privacy") {
+    if let url = URL(string: "https://iqra-subac.vercel.app/privacy") {
         openURL(url)
     }
 }
 
 private func openTermsOfService() {
-    if let url = URL(string: "https://iqra-subac-circle-vercel.vercel.app/terms") {
+    if let url = URL(string: "https://iqra-subac.vercel.app/terms") {
         openURL(url)
     }
 }
@@ -147,9 +147,9 @@ private func openSupportEmail() {
 ### **2. App Store Connect Configuration**
 
 In App Store Connect, add:
-- **Privacy Policy URL:** `https://iqra-subac-circle-vercel.vercel.app/privacy`
-- **Support URL:** `https://iqra-subac-circle-vercel.vercel.app/support`
-- **Marketing URL:** `https://iqra-subac-circle-vercel.vercel.app/app`
+- **Privacy Policy URL:** `https://iqra-subac.vercel.app/privacy`
+- **Support URL:** `https://iqra-subac.vercel.app/support`
+- **Marketing URL:** `https://iqra-subac.vercel.app/app`
 
 ### **3. Google Analytics Setup**
 
@@ -165,11 +165,11 @@ In App Store Connect, add:
 
 1. **Google Search Console:**
    - Go to https://search.google.com/search-console
-   - Add property for `https://iqra-subac-circle-vercel.vercel.app`
+   - Add property for `https://iqra-subac.vercel.app`
    - Verify ownership via HTML file upload
 
 2. **Submit Sitemap:**
-   - Your sitemap is at: `https://iqra-subac-circle-vercel.vercel.app/sitemap.xml`
+   - Your sitemap is at: `https://iqra-subac.vercel.app/sitemap.xml`
    - Submit to Google Search Console
 
 ## 📊 **Monitoring & Maintenance**

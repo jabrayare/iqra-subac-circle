@@ -186,7 +186,7 @@ This project is private and proprietary. All rights reserved.
 
 For questions about the Iqra app or this website:
 
-- **Email**: support@iqra-subac.com
+- **Email**: iqrasubac@gmail.com
 - **Website**: [iqra-subac.vercel.app](https://iqra-subac.vercel.app)
 
 ---

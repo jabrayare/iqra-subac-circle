@@ -496,12 +496,12 @@ export default function TermsOfServiceContent() {
                       <div>
                         <h3 className="heading-3 mb-4 text-deep-ocean-blue">General Support</h3>
                         <div className="space-y-3">
-                          <a 
-                            href="mailto:support@iqra-subac.com"
+                          <a
+                            href="mailto:iqrasubac@gmail.com"
                             className="flex items-center text-deep-ocean-blue hover:text-warm-sunset-orange transition-colors"
                           >
                             <Mail className="h-5 w-5 mr-2" />
-                            support@iqra-subac.com
+                            iqrasubac@gmail.com
                           </a>
                           <p className="text-sm text-text-secondary-light dark:text-text-secondary-dark">
                             For general app support and questions
@@ -512,12 +512,12 @@ export default function TermsOfServiceContent() {
                       <div>
                         <h3 className="heading-3 mb-4 text-deep-ocean-blue">Legal Matters</h3>
                         <div className="space-y-3">
-                          <a 
-                            href="mailto:legal@iqra-subac.com"
+                          <a
+                            href="mailto:iqrasubac@gmail.com"
                             className="flex items-center text-deep-ocean-blue hover:text-warm-sunset-orange transition-colors"
                           >
                             <Scale className="h-5 w-5 mr-2" />
-                            legal@iqra-subac.com
+                            iqrasubac@gmail.com
                           </a>
                           <p className="text-sm text-text-secondary-light dark:text-text-secondary-dark">
                             For legal inquiries and formal disputes
@@ -545,11 +545,11 @@ export default function TermsOfServiceContent() {
                         We strive to operate this service in accordance with Islamic principles of justice, 
                         fairness, and community welfare. If you have concerns about Islamic compliance or 
                         suggestions for improvements, please contact us at{' '}
-                        <a 
-                          href="mailto:islamic-compliance@iqra-subac.com"
+                        <a
+                          href="mailto:iqrasubac@gmail.com"
                           className="text-accent-green hover:text-deep-ocean-blue transition-colors font-medium"
                         >
-                          islamic-compliance@iqra-subac.com
+                          iqrasubac@gmail.com
                         </a>
                       </p>
                     </div>

@@ -475,12 +475,12 @@ export default function PrivacyPolicyContent() {
                         <h3 className="heading-3 mb-4 text-warm-sunset-orange">Privacy Questions</h3>
                         <p className="body-text mb-4">For privacy-related questions or concerns:</p>
                         <div className="space-y-2">
-                          <a 
-                            href="mailto:privacy@iqra-subac.com"
+                          <a
+                            href="mailto:iqrasubac@gmail.com"
                             className="flex items-center text-deep-ocean-blue hover:text-warm-sunset-orange transition-colors"
                           >
                             <Mail className="h-5 w-5 mr-2" />
-                            privacy@iqra-subac.com
+                            iqrasubac@gmail.com
                           </a>
                         </div>
                       </div>

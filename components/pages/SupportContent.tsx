@@ -19,9 +19,9 @@ const contactOptions = [
     icon: Mail,
     title: 'Email Support',
     description: 'Get help with any questions',
-    contact: 'support@iqra-subac.com',
+    contact: 'iqrasubac@gmail.com',
     gradient: 'from-blue-500 to-indigo-600',
-    action: 'mailto:support@iqra-subac.com'
+    action: 'mailto:iqrasubac@gmail.com'
   },
   {
     icon: MessageSquare,
@@ -298,7 +298,7 @@ export default function SupportContent() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="mailto:support@iqra-subac.com"
+                  href="mailto:iqrasubac@gmail.com"
                   className="btn-primary bg-white hover:bg-gray-100"
                   style={{ color: 'var(--color-primary)' }}
                 >

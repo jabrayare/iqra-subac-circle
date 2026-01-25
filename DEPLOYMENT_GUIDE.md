@@ -101,13 +101,9 @@ npm run export
 - Choose Business Starter plan ($6/user/month)
 - Use domain `iqra-subac.com`
 
-### **Step 2: Create Email Addresses**
-Create these professional addresses:
-- `support@iqra-subac.com`
-- `privacy@iqra-subac.com`
-- `legal@iqra-subac.com`
-- `admin@iqra-subac.com`
-- `hello@iqra-subac.com`
+### **Step 2: Email Address**
+Official email:
+- `iqrasubac@gmail.com`
 
 ### **Step 3: Configure MX Records**
 Add these MX records to your domain:
@@ -138,7 +134,7 @@ private func openTermsOfService() {
 }
 
 private func openSupportEmail() {
-    if let url = URL(string: "mailto:support@iqra-subac.com") {
+    if let url = URL(string: "mailto:iqrasubac@gmail.com") {
         openURL(url)
     }
 }

@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://iqra-subac.com'),
+  metadataBase: new URL('https://iqra-subac.vercel.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://iqra-subac.com',
+    url: 'https://iqra-subac.vercel.app',
     siteName: 'Iqra | The Subac Circle',
     title: 'Iqra | The Subac Circle - Islamic Prayer & Quran Circle Management',
     description: 'Join the Somali Muslim community in managing Subac circles, tracking prayer times, and finding mosques with our comprehensive Islamic app.',

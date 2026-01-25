@@ -271,7 +271,7 @@ export default function AboutContent() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
-                  href="mailto:hello@iqra-subac.com"
+                  href="mailto:iqrasubac@gmail.com"
                   className="btn-primary bg-white hover:bg-gray-100"
                   style={{ color: 'var(--color-primary)' }}
                 >

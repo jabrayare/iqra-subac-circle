@@ -2,7 +2,7 @@
 
 A modern, elegant marketing website for the Iqra iOS app — connecting the Somali Muslim community through technology.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://iqra-subac-circle-vercel.vercel.app)
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://iqra-subac.vercel.app)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.3-38bdf8)](https://tailwindcss.com/)
@@ -20,7 +20,7 @@ This repository contains the marketing website built with Next.js 14, featuring 
 
 ## Live Demo
 
-Visit the live site: **[iqra-subac-circle-vercel.vercel.app](https://iqra-subac-circle-vercel.vercel.app)**
+Visit the live site: **[iqra-subac.vercel.app](https://iqra-subac.vercel.app)**
 
 ## Features
 
@@ -187,7 +187,7 @@ This project is private and proprietary. All rights reserved.
 For questions about the Iqra app or this website:
 
 - **Email**: support@iqra-subac.com
-- **Website**: [iqra-subac-circle-vercel.vercel.app](https://iqra-subac-circle-vercel.vercel.app)
+- **Website**: [iqra-subac.vercel.app](https://iqra-subac.vercel.app)
 
 ---
 

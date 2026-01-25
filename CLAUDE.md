@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Iqra | The Subac Circle is a Next.js 14 marketing website for an iOS app targeting the Somali Muslim community. The app features Subac (communal Quran recitation circle) management, prayer times, Qibla compass, and mosque finder.
 
-**Live URL:** https://iqra-subac-circle-vercel.vercel.app
+**Live URL:** https://iqra-subac.vercel.app
 
 ## Commands
 
